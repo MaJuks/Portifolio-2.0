@@ -3,9 +3,9 @@
 
 :root{
     --white:#fff;
-    --light-pink:#FF2171;
-    --pink:#A8154A;
-    --dark-pink:#77002E;
+    --light-pink:#DAF1F9;
+    --pink:#A4D7E1;
+    --dark-pink:#A4D7E1;
     --light-bege:#FFFAD7;
     --bege:#FFE4A7;
     --dark-bege:#BAA370;
@@ -36,6 +36,7 @@ header{
     align-items: center;
     position: fixed;
     width: 100%;
+    border-bottom: 5px solid black;
 }
 header #ancho ul{
     font-family: var(--font-text);
@@ -50,7 +51,7 @@ header #ancho ul a{
     text-decoration: none;
 }
 header #logo{
-    font-family: var(--font-title);
+    font-family: #77002E;
     color: var(--dark-pink);
 }
 main{
@@ -85,12 +86,15 @@ main #inicio #bio-perfil #btn-perfil{
     padding: 10px;
     font-family: var(--font-text);
     margin: 10px 0px;
-    border-radius: 3px;
+    border-radius: 5px;
     text-align: center;
     transition: 0.5s;
+    border: 3px solid black;
+
 }
 main #inicio #bio-perfil #btn-perfil:hover{
     background-color: #8F7743;
+
 }
 main #inicio #bio-perfil #btn-perfil a{
     color: var(--white);
@@ -102,6 +106,7 @@ main #inicio #img-perfil img{
     min-width: 200px;
     width: 100%;
 }
+
 /* section sobre mim */
 main #sobre-mim{
     background-color: var(--pink);
@@ -296,6 +301,5 @@ footer #social-medias #social svg:hover{
     }
     main #projetos #box-projetos{
         gap: 10px;
-    }
     }
 }
