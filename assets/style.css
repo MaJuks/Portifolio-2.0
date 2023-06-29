@@ -3,12 +3,13 @@
 
 :root{
     --white:#fff;
-    --light-pink:#DAF1F9;
-    --pink:#A4D7E1;
-    --dark-pink:#A4D7E1;
+    --light-blue:#DAF1F9;
+    --blue:#A4D7E1;
+    --dark-blue:#A4D7E1;
     --light-bege:#FFFAD7;
     --bege:#FFE4A7;
     --dark-bege:#BAA370;
+    --pink: #77002E;
 
     --font-text: 'Quando', serif;
     --font-title:'Press Start 2P', cursive;
@@ -23,20 +24,20 @@
     box-sizing: border-box;
 }
 body{
-    background-color: var(--bege);
+    background: linear-gradient(180deg, var(--light-bege) 0%, var(--bege) 100%);
 }
 a{
     text-decoration: none;
 }
 header{
     padding: 30px 25px;
-    background-color: rgb(186, 163, 112, 0.95);
+    background-color: rgb(186, 163, 112,1);
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: fixed;
     width: 100%;
-    border-bottom: 5px solid black;
+    border-bottom: 3x solid black;
 }
 header #ancho ul{
     font-family: var(--font-text);
@@ -51,8 +52,15 @@ header #ancho ul a{
     text-decoration: none;
 }
 header #logo{
-    font-family: #77002E;
-    color: var(--dark-pink);
+    font-family: var(--font-title);
+    color: var(--pink);
+}
+header #logo h1{
+    animation: color-change 3s infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 2s steps(13,end), blink 800ms steps(13) infinite normal;
+    border-right: 5px solid var(--pink);
 }
 main{
     display: flex;
@@ -106,10 +114,12 @@ main #inicio #img-perfil img{
     min-width: 200px;
     width: 100%;
 }
-
+hr{
+    border: 2px solid black;
+}
 /* section sobre mim */
 main #sobre-mim{
-    background-color: var(--pink);
+    background-color: var(--blue);
 }
 main #sobre-mim #img-avatar{
     padding: var(----padding-bio-avatar);
@@ -135,13 +145,13 @@ main #sobre-mim #bio-avatar h1{
     font-size: 30px;
 }
 main #sobre-mim #bio-avatar p{
-    color: var(--light-bege);
+    color: var(--bege);
     font-family: var(--font-text);
     margin: 5px 0;
     font-size: 20px;
 }
 main #projetos{
-    background-image: url("./img/Polygon\ 1.png");
+    background: url("./img/tri2.png") ;
     flex-direction: column;
 }
 main #projetos #title-projetos{
@@ -155,20 +165,25 @@ main #projetos #box-projetos{
     display: flex;
     justify-content: space-around;
     gap: 50px;
+    margin-bottom: 40px;
 }
 main #projetos #box-projetos #box img{
     min-width: 80%;
     width: 100%;
+    transition: 0.5s;
+}
+main #projetos #box-projetos #box img:hover{
+    filter: brightness(80%);
 }
 main #projetos #subtitle-projetos a{
     color: var(--dark-bege);
     font-family: var(--font-text);
     margin: 5px 0;
     font-size: 20px;
-    text-decoration: none;
+    text-decoration:underline;
 }
 main #habilidades{
-    background-color:var(--pink);
+    background-color:var(--blue);
     flex-direction: column;
 }
 main #habilidades #title-habilidades{
@@ -187,13 +202,11 @@ main #habilidades #box-habilidades #habilidades img{
     width: 100%;
     min-width: 50px;
     min-height: 50px;
-
-}
-main #habilidades #box-habilidades #habilidades{
     transition: 1s;
 }
-main #habilidades #box-habilidades #habilidades:hover{
-    opacity: 0.8;
+main #habilidades #box-habilidades #habilidades img:hover{
+    filter: brightness(80%);
+
 }
 main #habilidades #text-habilidades{
     display: flex;
@@ -210,14 +223,14 @@ main #habilidades #text-habilidades p{
     line-height: 20px;
 }
 footer{
-    background-color: var(--light-bege);
+    background-color: var(--bege);
     display: flex;
     justify-content: space-around;
     padding: 25px;
     align-items: center;
 }
 footer #contato p{
-    color: var(--dark-pink);
+    color: var(--pink);
     font-family: var(--font-text);
     font-size: 20px;
     text-decoration: none;
@@ -227,7 +240,7 @@ footer #social-medias{
     gap: 20px;
 }
 footer #social-medias #social a{
-    color: var(--dark-pink);
+    color: var(--pink);
 }
 footer #social-medias #social svg{
     width: 100%;
@@ -302,4 +315,33 @@ footer #social-medias #social svg:hover{
     main #projetos #box-projetos{
         gap: 10px;
     }
+}
+
+@keyframes color-change {
+    0% { color: var(--pink);}
+    50% { color: var(--blue); }
+    100% { color: var(--pink); }
+  }
+  
+@keyframes typewriter {
+0% {
+    width: 0%;
+    }
+25% {
+      width: 50%;
+    }
+50%{
+    width: 50%;
+    }
+100%{
+    width: 100%;
+}
+}
+@keyframes blink {
+    from {
+      border-color: white;
+    }
+    to {
+      border-color: transparent;
+}
 }

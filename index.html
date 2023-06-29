@@ -6,14 +6,15 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="./assets/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Quando&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Portifólio - Maria Júlia</title>
 </head>
 <body>
-    <header>
-            <nav id="ancho">
+    <header  >
+            <nav id="ancho" data-aos="fade">
                 <ul>
                     <a href="#inicio"><li>Início</li></a>
                     <a href="#sobre-mim"><li>Sobre mim</li></a>
@@ -21,13 +22,13 @@
                     <a href="#habilidades"><li>Habilidades</li></a>
                 </ul>
             </nav>
-            <div id="logo">
+            <div id="logo"  data-aos="fade">
                 <h1>Maria Júlia</h1>
             </div>
     </header>
     <main>
         <section id="inicio">
-            <div id="bio-perfil">
+            <div id="bio-perfil" data-aos="fade-right">
                 <p>Olá, sou a</p>
                 <h1>Maria Júlia.</h1>
                 <p>Desenvolvedora Front-end</p>
@@ -35,17 +36,17 @@
                     <a target="_blank" href="https://www.linkedin.com/in/mariajnascimento/">Linkedin</a>
                 </div>
             </div>
-            <div id="img-perfil">
+            <div id="img-perfil" data-aos="fade-left">
                 <img src="./assets/img/foto.png" alt="">
             </div>
         </section>
         <section id="sobre-mim">
-            <div id="img-avatar">
+            <div id="img-avatar" data-aos="fade-up">
                 <img id="avatar" src="./assets/img/img.png" alt="">
             </div>
-            <div id="bio-avatar">
+            <div id="bio-avatar" data-aos="fade-up">
                 <h1>Sobre mim</h1>
-                <p>Sou um estudante com formação técnica em Informática Integrada ao Ensino Médio e 
+                <p>Sou uma estudante com formação técnica em Informática Integrada ao Ensino Médio e 
                     atualmente estudo Engenharia de Software. Desde 2019, tenho me dedicado a área de programação,
                     adquirindo habilidades em HTML, CSS, JavaScript e SQL. Por meio de cursos 
                     especializados, venho me aprimorando nessa área, buscando oferecer interfaces atraentes e 
@@ -56,10 +57,10 @@
             </div>
         </section>
         <section id="projetos">
-            <div id="title-projetos">
+            <div id="title-projetos" data-aos="fade-up">
                 <h1>Projetos</h1>
             </div>
-            <div id="box-projetos">
+            <div id="box-projetos" data-aos="zoom-in">
                 <div id="box">
                     <a target="_blank" href="https://majuks.github.io/WebHistory/"><img src="./assets/img/box.png" alt=""></a>
                 </div>
@@ -70,16 +71,16 @@
                     <a href=""><img src="./assets/img/em breve.png" alt=""></a>
                 </div>
             </div>
-            <div id="subtitle-projetos">
+            <div id="subtitle-projetos" data-aos="fade-up">
                 <a target="_blank" href="https://github.com/MaJuks"><p>Repositórios no Github</p>
                 </a>
             </div>
         </section>
         <section id="habilidades">
-            <div id="title-habilidades">
+            <div id="title-habilidades" data-aos="fade-up">
                 <h1>Habilidades</h1>
             </div>
-            <div id="box-habilidades">
+            <div id="box-habilidades" data-aos="zoom-in">
                 <div class="skill-box" id="habilidades">
                     <img id="h1" src="./assets/img/h2.png" alt="">
                 </div>
@@ -105,7 +106,7 @@
                     <img id="h8"  src="./assets/img/h7.png" alt="">
                 </div>
             </div>
-            <div id="text-habilidades">
+            <div id="text-habilidades" data-aos="fade-up">
                 <p class="texto-descricao" >// Tecnologias que aprendi nos últimos anos.</p>
             </div>
         </section>
@@ -126,10 +127,10 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./assets/js.js"></script>
     <script>
         feather.replace()
-        
     </script>
 </body>
 </html>

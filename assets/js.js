@@ -1,3 +1,4 @@
+AOS.init();
 const skills = document.querySelectorAll('.skill-box');
 const descricao = document.querySelector('.texto-descricao');
 const sobreSkill = [
